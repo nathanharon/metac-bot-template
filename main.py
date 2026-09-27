@@ -678,6 +678,9 @@ if __name__ == "__main__":
         folder_to_save_reports_to=None,
         skip_previously_forecasted_questions=True,
         extra_metadata_in_explanation=True,
+        llms={
+            "researcher": GeneralLlm(model="openai/gpt-5-search-api", timeout=180, allowed_tries=2),
+        },
         # llms={
         #     "default": GeneralLlm(
         #         model="openrouter/openai/gpt-4o",
